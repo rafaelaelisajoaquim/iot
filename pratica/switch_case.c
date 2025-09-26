@@ -19,9 +19,8 @@ int main() {
 			case '*':
 				printf("=%.2f", num1*num2);
 			break;
-			case '/':
-				printf("=%.2f", num1/num2);
-			break;
+			case '/':	
+				break;
 			default:
 			printf("Operador invalido!");
 		}
