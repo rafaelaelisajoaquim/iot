@@ -1,50 +1,117 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
 
 int main() {
-    int opcao;
-    float salario, imposto, novo_salario;
-
-    printf("Opcoes:\n");
-    printf("1. Imposto\n");
-    printf("2. Novo salario\n");
-    printf("3. Classificacao\n");
-    printf("Digite a opcao que deseja: ");
-    scanf("%d", &opcao);
-
-    printf("Digite o salario: ");
-    scanf("%f", &salario);
-
-    switch (opcao) {
-        case 1:
-            if (salario < 500) {
-                imposto = salario * 0.05;
-            } else if (salario <= 850) {
-                imposto = salario * 0.10;
-            } else {
-                imposto = salario * 0.15;
-            }
-            printf("Valor do imposto: R$ %.2f\n", imposto);
-        break;
-
-        case 2:
-            if (salario > 1500) {
-                novo_salario = salario + 25;
-            } else if (salario >= 750) {
-                novo_salario = salario + 50;
-            } else if (salario >= 450) {
-                novo_salario = salario + 75;
-            } else {
-                novo_salario = salario + 100;
-            }
-            printf("Novo salario: R$ %.2f\n", novo_salario);
-        break;
-
-        case 3: 
-            if (salario <= 700) {
-                printf("Classificacao: Mal remunerado\n");
-            } else {
-                printf("Classificacao: Bem remunerado\n");
-            }
-        break;
-    }
-}
+	setlocale(LC_ALL,"Portuguese");
+	int dia, mes, diasnomes ;
+		printf("Digite o dia do seu aniversario:\n");
+			scanf("%d", &dia);
+			
+		printf("Digite o mes do seu aniversario:\n");
+			scanf("%d", &mes);
+			
+		switch(mes){
+			case 1: case 3 :case 5: case 7: case 8: case 10: case 12:
+				diasnomes=31; 
+			break;
+			case 4: case 6 :case 9: case 11:
+				diasnomes=29;
+			break;
+			case 2:
+				diasnomes=29;
+			break;
+				printf("Mes invalido.\n");
+		}
+		
+		if(dia<1 || dia>diasnomes) {
+		printf("Dia invalido.\n");
+		return 0;
+		}
+		
+		switch(mes) {
+			case 1:
+				if(dia>=20)
+					printf("Seu signo eh Aquario\n");
+				else
+					printf("Seu signo eh Capricornio\n");
+			break;
+			
+			case 2: 
+				if(dia>=19) 
+					printf("Seu signo eh Peixes\n");
+				else
+					printf("Seu signo eh Aquario\n");
+			break;
+			
+			case 3:
+				if(dia>=21) 
+					printf("Seu signo eh Aries\n");
+				else
+					printf("Seu signo eh Peixes\n");
+			break;
+			
+			case 4:
+				if(dia>=20) 
+					printf("Seu signo eh Touro\n");
+				else
+					printf("Seu signo eh Aries\n");
+			break;
+			
+			case 5: 
+				if(dia>=21) 
+					printf("Seu signo eh Gemeos\n");
+				else
+					printf("Seu signo eh Touro\n");
+			break;
+			
+			case 6: 
+				if(dia>=22) 
+					printf("Seu signo eh Cancer\n");
+				else
+					printf("Seu signo eh Gemeos\n");
+			break;
+			
+			case 7: 
+				if(dia>=23) 
+					printf("Seu signo eh Leao\n");
+				else
+					printf("Seu signo eh Cancer\n");
+			break;
+			
+			case 8: 
+				if(dia>=23) 
+					printf("Seu signo eh Virgem\n");
+				else
+					printf("Seu signo eh Leao\n");
+			break;
+			
+			case 9: 
+				if(dia>=23) 
+					printf("Seu signo eh Libra\n");
+				else
+					printf("Seu signo eh Virgem\n");
+			break;
+			
+			case 10: 
+				if(dia>=23) 
+					printf("Seu signo eh Escorpiao\n");
+				else
+					printf("Seu signo eh Libra\n");
+			break;
+			
+			case 11:
+				if(dia>=22) 
+					printf("Seu signo eh Sagitario\n");
+				else
+					printf("Seu signo eh Escorpiao\n");
+			break;
+			
+			case 12: 
+				if(dia>=22) 
+					printf("Seu signo eh Capricornio\n");
+				else
+					printf("Seu signo eh Sagitario\n");
+			break;
+		} 
+	}
