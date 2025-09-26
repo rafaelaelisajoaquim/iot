@@ -15,7 +15,7 @@ int main() {
     scanf("%f", &salario);
 
     switch (opcao) {
-        case 1: // Imposto
+        case 1:
             if (salario < 500) {
                 imposto = salario * 0.05;
             } else if (salario <= 850) {
