@@ -26,4 +26,5 @@ int main() {
             printf("Valor: %d | Posicao: %d\n", vetor[i], i);
         }
     }
+    printf("\n Rafaela Elisa Joaquim.");
 }

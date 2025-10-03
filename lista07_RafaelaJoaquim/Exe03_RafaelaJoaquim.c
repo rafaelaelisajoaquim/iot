@@ -19,5 +19,6 @@ int main() {
     }
     if (!encontrou) {
     	printf("Nenhum numero acima de 50 foi digitado\n");
+    		    printf("\n Rafaela Elisa Joaquim.");
 	}
 }
